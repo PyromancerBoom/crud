@@ -10,11 +10,13 @@ const Form = () => {
   return (
     <div className="info">
       <label>User:</label>
-      <input type="text" />
+      {/* On change grabs teh input and sets the state variable to that input
+      And this happens whenever there is a change in the input, even character by character */}
+      <input type="text" onChange={(event) => setName(event.target.value)} />
       <label>Age:</label>
-      <input type="number" />
+      <input type="number" onChange={(event) => setAge(event.target.value)} />
       <label>Comment:</label>
-      <input type="text" />
+      <input type="text" onChange={(event) => setComment(event.target.value)} />
       <button>Add</button>
     </div>
   );
